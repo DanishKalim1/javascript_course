@@ -1,37 +1,25 @@
-// Following code shows the comparison between two players with higher score.
-/*var aslamAge =35;
-var salimAge=50;
-var salimHeight= 150;
-var aslamHeight = 200;
-var aslamScore = aslamHeight + 5  * aslamAge ;
-var salimScore = salimHeight + 5  * salimAge;
-  if(aslamScore > salimScore){
-    console.log('Aslam has won with '+ aslamScore + " points");
-    }
-else if(salimScore>aslamScore){
-  console.log('Salim has won with '+  salimScore + " points");
+/*
+function help us to avoid repeatation of code .Once the function is written we can call it easily;
+*/
+//function to calculate age;
+function calculate_age(birthyear){
+var age =  2018- birthyear;
+return age;
 }
-else{
-  console.log("Tie")
-}*/
-//Following code compares the higher score of more than two players.
-var sohailAge=40;
-var aslamAge=35;
-var salimAge=50;
-var salimHeight= 150;
-var aslamHeight = 200;
-var sohailHeight = 500;
-var sohailScore= sohailHeight + 5 * sohailHeight;
-var aslamScore = aslamHeight + 5  * aslamAge ;
-var salimScore = salimHeight + 5  * salimAge;
-  if(aslamScore > salimScore  && aslamScore > sohailScore){
-    console.log('Aslam has won with '+ aslamScore + " points");
-    }
-else if(salimScore > aslamScore && salimScore > sohailScore){
-  console.log('Salim has won with '+  salimScore + " points");
-}
-else if(sohailScore > aslamScore && sohailScore > salimScore){
-  console.log('sohail has won with '+  sohailScore + " points");
-}
-else{
-  console.log("Tie");}
+calculate_age(1990);
+// Once we have created the function we do not need to write code again we simply call it 
+var karim = calculate_age(1955);
+console.log(karim);
+// function can called on other function too.
+function retirement_duration(name,year){
+  age = calculate_age(year);
+  time_remian = 60 - age; 
+   if(time_remian >=0 ){
+     console.log(name + " is going to retire in " + time_remian + " years");
+   }
+ else{
+   console.log(name + " has already retired");
+ }
+
+  }
+retirement_duration("salim",1980)
