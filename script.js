@@ -1,25 +1,18 @@
-/*
-function help us to avoid repeatation of code .Once the function is written we can call it easily;
-*/
-//function to calculate age;
-function calculate_age(birthyear){
-var age =  2018- birthyear;
-return age;
-}
-calculate_age(1990);
-// Once we have created the function we do not need to write code again we simply call it 
-var karim = calculate_age(1955);
-console.log(karim);
-// function can called on other function too.
-function retirement_duration(name,year){
-  age = calculate_age(year);
-  time_remian = 60 - age; 
-   if(time_remian >=0 ){
-     console.log(name + " is going to retire in " + time_remian + " years");
-   }
- else{
-   console.log(name + " has already retired");
- }
-
-  }
-retirement_duration("salim",1980)
+// Arrays can store multiple data type like number and string .
+//For example 
+var salman = ["khan", 1965, "india"];
+// Dont forget that arrays are index based means 1 value will start fro 0;
+// So if you want to access the 1 no u must mention its index;
+console.log(salman[1]);
+// We can apply multiple method on arrays like push(); which is used to add element at the end of an array; 
+salman.push("aslam");
+console.log (salman);
+//unshift method is used to add element at the start of an array;
+salman.unshift("karim");
+//shift removes the first element of an array;
+salman.shift();
+//Pop method is used to remove last element of an array;
+salman.pop();
+console.log(salman);
+// indexOf(); method is to figures out the index of the element;
+console.log(salman.indexOf("india"));
