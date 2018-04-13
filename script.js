@@ -1,18 +1,23 @@
-// Arrays can store multiple data type like number and string .
-//For example 
-var salman = ["khan", 1965, "india"];
-// Dont forget that arrays are index based means 1 value will start fro 0;
-// So if you want to access the 1 no u must mention its index;
-console.log(salman[1]);
-// We can apply multiple method on arrays like push(); which is used to add element at the end of an array; 
-salman.push("aslam");
-console.log (salman);
-//unshift method is used to add element at the start of an array;
-salman.unshift("karim");
-//shift removes the first element of an array;
-salman.shift();
-//Pop method is used to remove last element of an array;
-salman.pop();
-console.log(salman);
-// indexOf(); method is to figures out the index of the element;
-console.log(salman.indexOf("india"));
+//objects have ability to store key and its value;
+var driver ={
+  name:"aslam",
+  location:"karachi",
+  number:03332456877,
+  profession:"driver"
+  }
+  // we can easily check the key and values of the objects.
+  console.log(driver);
+  //We can aslo check the spacific key and its value with dot notation,
+  console.log(driver.profession);
+  //another way to check the key and its value is bracket notation.
+  console.log(driver['number']);
+  //We can aslo change the objects values
+  driver.name = "sabir";
+  driver['location'] = "hyderabad";
+  console.log(driver);
+  //Another way creating an object 
+  var salim = new Object();
+  salim.cast = "khan";
+  salim.father ="sanaullah";
+  salim['location']= "nawabshah";
+  console.log(salim);
