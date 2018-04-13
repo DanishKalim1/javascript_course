@@ -1,23 +1,28 @@
-//objects have ability to store key and its value;
-var driver ={
-  name:"aslam",
-  location:"karachi",
-  number:03332456877,
-  profession:"driver"
+/*var worker = {
+  name:"faisal",
+  profession:"landlord",
+  number:03214568,
+  birth_year:1990,
+  family:["majeed","yasir","husnain"],
+  calAge : function(birth_year){
+    return   2018 - birth_year;
   }
-  // we can easily check the key and values of the objects.
-  console.log(driver);
-  //We can aslo check the spacific key and its value with dot notation,
-  console.log(driver.profession);
-  //another way to check the key and its value is bracket notation.
-  console.log(driver['number']);
-  //We can aslo change the objects values
-  driver.name = "sabir";
-  driver['location'] = "hyderabad";
-  console.log(driver);
-  //Another way creating an object 
-  var salim = new Object();
-  salim.cast = "khan";
-  salim.father ="sanaullah";
-  salim['location']= "nawabshah";
-  console.log(salim);
+  
+  };
+ 
+  console.log(worker.calAge(1986));
+  console.log(worker);*/
+//This keyword refers to the current object here worker.birth_year = this.birth_year
+
+var worker = {
+  name:"faisal",
+  profession:"landlord",
+  number:03214568,
+  birth_year:1990,
+  family:["majeed","yasir","husnain"],
+  calAge : function(){
+    this.age = 2018 - this.birth_year;
+  }
+  };
+ console.log(worker.calAge());
+ console.log(worker);
