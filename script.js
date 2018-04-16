@@ -1,38 +1,23 @@
-
-var cities = ["khi","isl","lhr","hyd","mirpur"];
-//for loop
-for(var i = 0;i<cities.length;i++){
-  console.log(cities[i]);
-  }
-  
-  //reverse loop
-  for(var i=cities.length; i>=0; i--){
-  
-   console.log(cities[i]);
-  
+//Coding challange 2 .In this function i made a program to check who is adult.  
+function adult_list(birth_year){
+var adult = [];
+var check_adult = [];
+for(var i = 0; i <birth_year.length; i++){
+  check_adult[i] = 2018 - birth_year[i];
 }
-
-//while loop
-i =0;
-while(i<cities.length){
-  console.log(cities[i]);
-  i++;
+for(i=0; i <check_adult.length; i++ ){
+  if(check_adult[i]>18){
+    console.log("This person is " +check_adult[i] +" years old and He is adult ");
+    adult.push(true);
   }
-//break loop
-
-for(i=0;i<=8;i++){
-  console.log(i);
-  if(i === 4){
-    break;
+  else{
+    console.log("This person is " +check_adult[i] +" years old and He is Not adult ");
+    adult.push(false);
   }
-  
+ 
 }
-//continue
-for(i=0;i<=8;i++){
-  
-  if(i === 4){
-    continue;
-  }
-  console.log(i);
+ return adult;
 }
-
+var birth_year = [2002,1990,2012,1945,2002];
+adult_list(birth_year);
+adult_list([2002,1945,1923]);
